@@ -117,6 +117,14 @@ PHP 8.0+, PDO, MySQL 5.7+ or MariaDB 10.2+.
 - **`purge()` deletes in one statement.** On a table that has gone years without
   retention, delete in batches first.
 
+## Background
+
+This library came out of adding a "most read right now" list to a site that
+was already in production. The write-up of what broke, in order, is here
+(Japanese):
+
+[キャッシュが効くとランキングは止まる：分単位バケットと原子的カウントで壊れないリアルタイム集計を作る](https://zenn.dev/karakihiroyuki/articles/058628228f203a)
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
@@ -175,6 +183,12 @@ PDOは `ATTR_EMULATE_PREPARES => false` が必須です。エミュレーショ�
 - `GET_LOCK` はMySQL/MariaDB依存です
 - ボットの除外は行いません
 - `purge()` は1文で削除します。長期間パージしていないテーブルでは、先に分割削除してください
+
+## 背景
+
+稼働中のサイトに「いま読まれている順」のランキングを足したときに、順番に壊れた箇所を記録した記事です。
+
+[キャッシュが効くとランキングは止まる：分単位バケットと原子的カウントで壊れないリアルタイム集計を作る](https://zenn.dev/karakihiroyuki/articles/058628228f203a)
 
 ## ライセンス
 
