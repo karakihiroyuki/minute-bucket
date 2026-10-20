@@ -1,0 +1,16 @@
+{
+    "name": "karakihiroyuki/minute-bucket",
+    "description": "Minute-bucketed hit counting on MySQL: atomic upserts, bounded retention, and a named lock against cache stampedes.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        { "name": "Hiroyuki Karaki" }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": { "Hozolab\\MinuteBucket\\": "src/" }
+    }
+}
